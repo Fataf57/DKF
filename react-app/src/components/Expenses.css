@@ -1,0 +1,45 @@
+.expenses-page {
+  padding: 24px;
+}
+
+.expenses-table-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expenses-table thead {
+  background: #f8fafc;
+}
+
+.expenses-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.expenses-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.expenses-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.expense-amount {
+  font-weight: 600;
+  color: #ef4444;
+}
+

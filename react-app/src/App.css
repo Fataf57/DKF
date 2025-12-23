@@ -1,0 +1,4 @@
+/* Styles minimaux - Tailwind gère le reste */
+.loading {
+  @apply flex justify-center items-center min-h-screen text-2xl text-primary font-medium;
+}

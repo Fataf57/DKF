@@ -1,0 +1,344 @@
+.sales-page {
+  padding: 24px;
+}
+
+/* Style Excel pour le formulaire */
+.excel-form-container {
+  background: #ffffff;
+  border: 2px solid #0078d4;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.excel-form {
+  padding: 0;
+}
+
+.excel-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #c1c1c1;
+}
+
+.excel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.excel-header {
+  background: #f2f2f2;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #323130;
+  border: 1px solid #c1c1c1;
+  border-bottom: 2px solid #0078d4;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.excel-row {
+  background: #ffffff;
+}
+
+.excel-row:nth-child(even) {
+  background: #fafafa;
+}
+
+.excel-row:hover {
+  background: #e8f4f8;
+}
+
+.excel-cell {
+  padding: 4px 8px;
+  border: 1px solid #c1c1c1;
+  vertical-align: middle;
+  min-height: 28px;
+}
+
+.excel-input,
+.excel-select {
+  width: 100%;
+  padding: 4px 6px;
+  border: none;
+  font-size: 13px;
+  background: transparent;
+  font-family: inherit;
+  color: #323130;
+}
+
+.excel-select {
+  cursor: pointer;
+}
+
+.excel-input:focus,
+.excel-select:focus {
+  outline: 2px solid #0078d4;
+  outline-offset: -2px;
+  background: #ffffff;
+}
+
+.excel-input-number {
+  width: 100%;
+  padding: 4px 6px;
+  border: none;
+  font-size: 13px;
+  text-align: right;
+  background: transparent;
+  font-family: inherit;
+  color: #323130;
+}
+
+.excel-input-number:focus {
+  outline: 2px solid #0078d4;
+  outline-offset: -2px;
+  background: #ffffff;
+}
+
+.excel-total {
+  text-align: right;
+  font-weight: 600;
+  color: #107c10;
+  background: #e8f5e9;
+  border: 1px solid #c1c1c1;
+}
+
+.excel-footer-row {
+  background: #e8e8e8;
+  border-top: 2px solid #0078d4;
+}
+
+.excel-total-label {
+  text-align: right;
+  font-weight: 700;
+  color: #323130;
+  background: #e8e8e8;
+}
+
+.excel-total-amount {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  color: #107c10;
+  background: #e8f5e9;
+  border: 1px solid #c1c1c1;
+}
+
+.excel-btn-add,
+.excel-btn-remove {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #c1c1c1;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  color: #323130;
+  font-weight: bold;
+}
+
+.excel-btn-add {
+  color: #107c10;
+  border-color: #107c10;
+}
+
+.excel-btn-add:hover {
+  background: #e8f5e9;
+  border-color: #107c10;
+}
+
+.excel-btn-remove {
+  color: #d13438;
+  border-color: #d13438;
+}
+
+.excel-btn-remove:hover:not(:disabled) {
+  background: #fef6f6;
+  border-color: #d13438;
+}
+
+.excel-btn-remove:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: #f5f5f5;
+}
+
+.excel-form-footer {
+  padding: 16px;
+  background: #f8f8f8;
+  border-top: 2px solid #0078d4;
+}
+
+.excel-textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #c1c1c1;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  background: #ffffff;
+  color: #323130;
+}
+
+.excel-textarea:focus {
+  outline: 2px solid #0078d4;
+  outline-offset: -2px;
+}
+
+.excel-form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.excel-btn-reset,
+.excel-btn-submit {
+  padding: 8px 16px;
+  border: 1px solid #c1c1c1;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.excel-btn-reset {
+  background: #ffffff;
+  color: #323130;
+}
+
+.excel-btn-reset:hover {
+  background: #f3f3f3;
+  border-color: #8a8886;
+}
+
+.excel-btn-submit {
+  background: #0078d4;
+  color: #ffffff;
+  border-color: #0078d4;
+}
+
+.excel-btn-submit:hover {
+  background: #106ebe;
+  border-color: #106ebe;
+}
+
+.sales-list-section {
+  margin-top: 32px;
+}
+
+.sales-list-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.sales-table-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-table thead {
+  background: #f8fafc;
+}
+
+.sales-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sales-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.sales-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.sale-amount {
+  font-weight: 600;
+  color: #10b981;
+}
+
+.sale-item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.sale-item-row select,
+.sale-item-row input {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-remove {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.btn-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-add-item {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-add-item:hover {
+  background: #e2e8f0;
+}
+
+.modal-content.large {
+  max-width: 800px;
+}
+
