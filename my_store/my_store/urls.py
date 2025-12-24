@@ -15,9 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
+from django.views.static import serve
+import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,3 +36,18 @@ urlpatterns = [
 # Serve media files in development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Serve React app in production
+# Chemin vers le build React (ajustez selon votre structure)
+REACT_BUILD_DIR = os.path.join(settings.BASE_DIR.parent, 'react-app', 'build')
+
+if os.path.exists(REACT_BUILD_DIR):
+    # Servir index.html pour toutes les routes qui ne sont pas API/admin/static/media
+    # Cela permet au routing React de fonctionner
+    def serve_react_app(request):
+        index_path = os.path.join(REACT_BUILD_DIR, 'index.html')
+        return serve(request, os.path.basename(index_path), os.path.dirname(index_path))
+    
+    urlpatterns += [
+        re_path(r'^(?!api|admin|static|media).*$', serve_react_app),
+    ]

@@ -1,4 +1,20 @@
-const API_BASE_URL = 'http://localhost:8000/api';
+// API Base URL - utilise une variable d'environnement ou détecte automatiquement
+const getApiBaseUrl = () => {
+  // En production, utiliser l'URL du backend PythonAnywhere
+  if (process.env.REACT_APP_API_URL) {
+    return process.env.REACT_APP_API_URL;
+  }
+  
+  // Détection automatique : si on est sur PythonAnywhere, utiliser le même domaine
+  if (window.location.hostname.includes('pythonanywhere.com')) {
+    return `${window.location.protocol}//${window.location.hostname}/api`;
+  }
+  
+  // Par défaut, utiliser localhost pour le développement
+  return 'http://localhost:8000/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 // Helper function to get auth token from localStorage
 const getAuthToken = () => {
